@@ -1,0 +1,12 @@
+imagehash
+PIL
+Flask
+bootstrap
+numpy
+scipy
+tensorflow
+
+Important : need to download pre-trained inception-net by google and extract it in 
+/tmp/imagenet
+
+URL = 'http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz'

@@ -118,7 +118,7 @@
                     <p>Skynet is a image similarity scorer which assigns a similarity score to your images based on Convolutional Networks and Perceptual Hashing('the hush hush stuff!') created by akset8.A convolutional Network by Google called Inception Net v3 is used .When the forward pass computation is done automated features computed at the POOL-3 layer are selected and the L2 norm between the two images is computed for similarity purposes.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>To Detect things like scaling ,cropping and saturation changes, a perceptual hash is computed and a score given by both the above techniques is assigned to the pair of images.Since TensorFlow only works on JPEG files  only .jpg files are accepted.Please dont upload more than two files.</p>
+                    <p>To Detect things like scaling ,cropping and saturation changes, a perceptual hash is computed.The Hamming Distance between both the perceprual hashes is computed.A score given by both the above techniques(Convet + Phash) is assigned to the pair of images.<br>Since TensorFlow only works on JPEG files  only .jpg files are accepted.Please dont upload more than two files.</p>
                 </div>
               
             </div>

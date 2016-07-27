@@ -16,6 +16,9 @@ To run:
 
 4.Application running at 0.0.0.0:80
 
+There are two versions cnn.py and cnn_fast.py, by default cnn_fast is used.In cnn version patch wise comparisons are also done hence making it much more time consuming but gives better results.To use that version replace cnn_fast.eval1 call in app.py by cnn.eval1
+
+
 PS:might need sudo priviledges
 
 References: 

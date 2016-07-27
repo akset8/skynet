@@ -57,6 +57,6 @@ def uploaded_file(filename):
                                filename)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int("80"))
+    app.run(host="0.0.0.0", port=80)
 
 

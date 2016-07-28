@@ -117,21 +117,28 @@ def eval1(image1 , image2):
         if(d<200):
             return (1-(float(d)/500))
         else:
-            return (1-(float(d)/400))
+            if(d < 400):
+                return (1-(float(d)/400))
+            else:
+                return 0
 
 
     else:
         if(c>0.95):
             return(c)
 
-        elif(d > 0.95):
-            return(d)
+        elif(d < 25):
+            return (1-(float(d)/500))
+            
 
         else:
             if(d<200):
                 return ((c+(1-(float(d)/500)))/2)
             else:
-                return ((c+(1-(float(d)/400)))/2)
+                if(d < 400):
+                    return ((c+(1-(float(d)/400)))/2)
+                else:
+                    return 0
             
 
 

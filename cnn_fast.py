@@ -61,7 +61,7 @@ def similarity1(image1 , image2):
 
 
 
-    with open('/users/akshaysethi/Desktop/inception/classify_image_graph_def.pb', 'rb') as graph_file:
+    with open('inception/classify_image_graph_def.pb', 'rb') as graph_file:
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(graph_file.read())
         tf.import_graph_def(graph_def, name='')

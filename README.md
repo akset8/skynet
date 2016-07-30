@@ -3,6 +3,15 @@ SKYNET
 
 This project aims at measuring visual similarity based on Deep Learning and Perceptual Hashing.
 -------------------------------------------------------------------------------------------------------------
+About:
+-------
+Uses two techniques :
+
+1.Using a InceptionNet V3 by google.To find similarity in images we need to some how extract features like SIFT , HOG , gabor filters etc in images but recent advances in deep learning have shown that deep nets are able to extract better features from the images.i have computed a feature set just before the final softmax layer in the inception net (called the pool-3 layer).For the given two images i have computed the L2 norm of the images(the eucliedian distance between the respective feature set computed.)
+
+2.Now the above approach captures things like translation between two images, occulsion and different perspectives whereas the original problem statement said that the images could also be cropped , scaled etc for that i have used a deterministic hashing technique called perceptual hashing which assigns a hash-value to the image.perceptual hashing hash the advantage the if the images are scaled and cropped within limits its hash value would be the same.The hamming distance between the hashvalues of the two images is computed and a score is assigned based on that to the pair of images.
+
+Furthermore,The similarity score is a weighted average of both the values.
 
 Features of InceptionNet at POOL3 layer are taken for two images and L2 norm is computed.Also used is Hamming Distance between the perceptual Hashes of two images.The net output is a weighted average of the two.
 
